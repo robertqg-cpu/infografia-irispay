@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de gestión de riesgo Onboarding y activación de complemento Iris pay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #021D42;
+            margin: 0.5rem 0;
+            opacity: 0.6;
+        }
+        .flow-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            width: 100%;
+            max-width: 320px;
+        }
+        .icon-symbol {
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    
+    <div class="container mx-auto p-4 sm:p-6 md:p-12">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#021D42] mb-2">Proceso de gestión de riesgo Onboarding y activación de complemento Iris pay</h1>
+            <p class="text-lg text-[#00A3DA]">Un vistazo al flujo del cliente desde el Onboarding hasta la Activación</p>
+        </header>
+
+        <main>
+            <section id="onboarding" class="mb-12 md:mb-16">
+                <h2 class="text-3xl font-bold text-center text-[#021D42] mb-10">Flujo de Nivel de Riesgo en Onboarding</h2>
+                
+                <div class="flex flex-col items-center space-y-4">
+                    <div class="flow-card">
+                        <div class="icon-symbol" style="color: #00A3DA;">💼</div>
+                        <h4 class="font-semibold text-lg">1. La Oportunidad Llega a la Mesa de Validación</h4>
+                        <p class="text-gray-600">El proceso se inicia con la llegada de una nueva oportunidad de cliente a la mesa de validación.</p>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <div class="flow-card">
+                        <div class="icon-symbol" style="color: #5C2D91;">⚙️</div>
+                        <h4 class="font-semibold text-lg">2. Evaluación en Herramienta de Onboarding</h4>
+                        <p class="text-gray-600">El cliente pasa por la herramienta para ser evaluado y clasificado, utilizando variables del CRM y contrastándolas con la información de la Cámara de Comercio. Adicionalmente, la mesa de validación revisa datos como direcciones, teléfonos, correos registrados y la actividad económica, entre otros. El objetivo de este proceso es identificar posibles cuentas mula o fraudes en la documentación presentada.</p>
+                    </div>
+
+                    <div class="flow-arrow">↓</div>
+
+                    <div class="flow-card">
+                        <div class="icon-symbol" style="color: #021D42;">🔀</div>
+                        <h4 class="font-semibold text-lg">3. Clasificación del Riesgo</h4>
+                        <p class="text-gray-600">El sistema asigna un nivel de riesgo que define los siguientes pasos.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-8 border-[#34D399]">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-4">✅</span>
+                            <h3 class="text-xl font-bold text-[#021D42]">A. Camino para Clientes de Bajo Riesgo</h3>
+                        </div>
+                        <p class="text-gray-600 font-semibold mb-2">Clasificación: Muy Bajo, Bajo o Medio.</p>
+                        <p class="text-gray-600">Estos clientes <strong class="text-[#34D399]">continúan sin necesidad</strong> de una aprobación adicional del equipo de Monitoreo Transaccional, agilizando su activación.</p>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-8 border-[#EF4444]">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-4">⚠️</span>
+                            <h3 class="text-xl font-bold text-[#021D42]">B. Camino para Clientes de Alto Riesgo</h3>
+                        </div>
+                        <p class="text-gray-600 font-semibold mb-2">Clasificación: Alto o Extremo.</p>
+                        <p class="text-gray-600">Estos clientes <strong class="text-[#EF4444]">deben pasar por una validación</strong> manual del equipo de Monitoreo para garantizar el cumplimiento y la seguridad. Como resultado de esta revisión, Monitoreo responde a través de un correo electrónico en el cual se adjuntan las evidencias que soportan el análisis y se comunica la decisión correspondiente: aprobación de la cuenta, rechazo de la misma o la indicación de que se requiere una validación adicional directamente con el cliente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="activation">
+                <h2 class="text-3xl font-bold text-center text-[#021D42] mb-10">Proceso de Activación del Complemento IrisPay</h2>
+
+                <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0">
+                    
+                    <div class="flow-card flex-1">
+                        <div class="icon-symbol" style="color: #00A3DA;">📞</div>
+                        <h4 class="font-semibold text-lg">1. Solicitud a Servicio al Cliente</h4>
+                        <p class="text-gray-600">El cliente solicita la activación de un complemento a través del área de Servicio al Cliente.</p>
+                    </div>
+
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                    
+                    <div class="flow-card flex-1">
+                        <div class="icon-symbol" style="color: #5C2D91;">📋</div>
+                        <h4 class="font-semibold text-lg">2. Verificación de Lista</h4>
+                        <p class="text-gray-600 mb-4">Se revisa si el cliente está en una lista dispuesta por Monitoreo, la cual contiene los clientes a los cuales se les aperturó el proceso y se les asignó un nivel de riesgo.</p>
+                        <a href="https://docs.google.com/spreadsheets/d/1uzkC43bqFSefkdYhnLzYZoY-qih_eiUX/edit?gid=115577431#gid=115577431" target="_blank" class="inline-block bg-[#021D42] text-white font-bold py-2 px-4 rounded-full text-sm hover:bg-[#00A3DA] transition-colors duration-300">
+                            Consultar Base de Datos
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8 space-y-4 md:space-y-0 mt-8">
+                    <!-- Camino 1: Si se encuentra en la base -->
+                    <div class="flex flex-col items-center flex-1">
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-card">
+                            <div class="icon-symbol" style="color: #00A3DA;">✅</div>
+                            <h4 class="font-semibold text-lg">Si se encuentra en la base: Activación</h4>
+                            <p class="text-gray-600">El complemento se activa de forma directa, ya que la cuenta ha sido validada previamente.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Flecha de separación para la rama -->
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="flow-arrow md:hidden">↓</div>
+
+                    <!-- Camino 2: Si NO se encuentra en la base -->
+                    <div class="flex flex-col items-center flex-1">
+                         <div class="flow-arrow">↓</div>
+                         <div class="flow-card bg-gray-100 border-dashed">
+                            <div class="icon-symbol" style="color: #EF4444;">🎟️</div>
+                            <h4 class="font-semibold text-lg">3. Creación de Ticket en Zoho</h4>
+                            <p class="text-gray-600">Si el cliente <strong class="text-[#EF4444]">NO está en la lista</strong>, el área de <strong class="text-[#EF4444]">Servicio al Cliente</strong> debe crear un ticket en Zoho para gestionar la activación a monitoreo transaccional quien analizara el cliente en solicitud.</p>
+                        </div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-card">
+                            <div class="icon-symbol" style="color: #00A3DA;">🔔</div>
+                            <h4 class="font-semibold text-lg">4. Respuesta de Monitoreo Transaccional</h4>
+                            <p class="text-gray-600">Monitoreo Transaccional informa sobre la activación, el rechazo del complemento o la solicitud de documentación adicional para su activación.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-16 pt-8 border-t border-gray-200">
+        </footer>
+
+    </div>
+</body>
+</html>
